@@ -1,0 +1,9 @@
+<template>
+    <h1>Hello home!</h1>
+</template>
+
+<script>
+    export default {
+        
+    };
+</script>
