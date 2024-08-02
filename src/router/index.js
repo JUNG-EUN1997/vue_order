@@ -4,8 +4,8 @@ import { createRouter, createWebHistory } from "vue-router";
 
 // @는 루트폴더 경로를 의미한다. 
 // import 시, 파일 내부에 export default가 있는 경우는 {}가 필요 없다
-import HomeComponent from "@/components/HomeComponent.vue";
-import TestComponent from "@/components/TestComponent.vue";
+import HomeComponent from "@/components/practices/HomeComponent.vue";
+import TestComponent from "@/components/practices/TestComponent.vue";
 
 // routing 할 내역들 작성
 const routes = [

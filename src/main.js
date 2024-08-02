@@ -5,9 +5,11 @@ import App from './App.vue'
 
 // src/router/index.js 파일의 router를 사용하겠다는 선언
 import VueRouter from '@/router/index.js';
+import vuetify from './plugins/vuetify';
 
 // createApp(App).mount('#app')
 const app = createApp(App);
 
 app.use(VueRouter);
+app.use(vuetify);
 app.mount('#app');
