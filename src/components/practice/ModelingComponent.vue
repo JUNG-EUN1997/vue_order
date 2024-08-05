@@ -41,6 +41,9 @@
                 return this.count *2;
             }
         },
+        created(){
+            alert("created 함수 호출")
+        },
         methods:{
             showValue(){
                 alert(this.value1 + " "+ this.value2);

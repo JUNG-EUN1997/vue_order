@@ -8,8 +8,16 @@ import { createRouter, createWebHistory } from "vue-router";
 
 // routing 할 내역들 작성
 import { practiceRouter } from "./practiceRouter";
+import { memberRouter } from "./memberRouter";
+import HomeComponent from "@/components/HomeComponent.vue";
 const routes = [
-    ...practiceRouter // router 구분용 
+    {
+        path: '/',
+        name: 'HomeComponent',
+        component: HomeComponent
+    },
+    ...practiceRouter, // router 구분용 
+    ...memberRouter
 ];
 
 const router = createRouter({
