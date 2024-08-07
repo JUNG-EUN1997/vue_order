@@ -10,6 +10,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import { practiceRouter } from "./practiceRouter";
 import { memberRouter } from "./memberRouter";
 import HomeComponent from "@/components/HomeComponent.vue";
+import { productRouter } from "./productRouter";
 const routes = [
     {
         path: '/',
@@ -17,7 +18,8 @@ const routes = [
         component: HomeComponent
     },
     ...practiceRouter, // router 구분용 
-    ...memberRouter
+    ...memberRouter,
+    ...productRouter
 ];
 
 const router = createRouter({
