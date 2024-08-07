@@ -40,6 +40,11 @@ export default {
                     title:'이메일', 
                     key: 'email', 
                     align:'start'
+                },
+                {
+                    title: '주문수량',
+                    key: 'orderCount',
+                    align:'center'
                 }
             ],
             memberList:[]
