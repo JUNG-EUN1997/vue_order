@@ -5,6 +5,7 @@ import ModelingComponent from "@/components/practice/ModelingComponent.vue";
 import RouterTestComponent from "@/components/practice/RouterTestComponent.vue";
 import VuetifyComponent from "@/components/practice/VuetifyComponent.vue";
 import WatchUpdateComponentCopy from "@/components/practice/WatchUpdateComponent.vue";
+import StoreTestComponent from "@/views/StoreTestComponent.vue";
 
 export const practiceRouter = [
     {
@@ -35,6 +36,9 @@ export const practiceRouter = [
         path: '/practice/routertest',
         name: 'RouterTestComponent',
         component:RouterTestComponent
-
+    },{
+        path: '/practice/storetest',
+        name: 'StoreTestComponent',
+        component:StoreTestComponent
     }
 ];
