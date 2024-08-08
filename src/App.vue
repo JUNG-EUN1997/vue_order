@@ -5,7 +5,7 @@
     <v-main>
       <router-view />
     </v-main>
-    <!-- <FooterComponentVue/> -->
+    <FooterComponentVue/>
   </v-app>
 </template>
 <!-- 1. <template>에는 html 코드가 들어가고, 
@@ -16,13 +16,13 @@
 -->
 <script>
 import HeaderComponentVue from './components/HeaderComponent.vue'
-// import FooterComponentVue from './components/FooterComponent.vue'
+import FooterComponentVue from './components/FooterComponent.vue'
 // App.vue는 Vue 애플리케이션의 루트 컴포넌트다 (재활용이 가능한 화면)
 export default {
   name: "App",
   components: {
     HeaderComponentVue,
-    // FooterComponentVue
+    FooterComponentVue
   },
 };
 </script>
