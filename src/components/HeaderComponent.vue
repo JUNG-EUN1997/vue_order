@@ -13,7 +13,7 @@
                     <v-btn :to="{path:'/'}">JAVA SHOP</v-btn>
                 </v-col>
                 <v-col class="d-flex justify-end">
-                    <v-btn v-if="isLogin" :to="{path:'/order/cart'}">장바구니</v-btn>
+                    <v-btn v-if="isLogin" :to="{path:'/order/cart'}">장바구니 {{ getTotalQuantity }}</v-btn>
                     <v-btn :to="{path:'/product/list'}">상품목록</v-btn>
                     <v-btn v-if="isLogin" :to="{path:'/mypage'}">Mypage</v-btn>
                     <v-btn v-if="!isLogin" :to="{path:'/member/create'}">회원가입</v-btn>
@@ -26,12 +26,16 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
     export default {
         data(){
             return{
                 userRole: null,
                 isLogin: false,
             }
+        },
+        computed:{
+            ...mapGetters(['getTotalQuantity'])
         },
         created(){
             const token = localStorage.getItem('token');
