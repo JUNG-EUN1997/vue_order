@@ -27,6 +27,10 @@
 
 <script>
 import { mapGetters } from 'vuex';
+
+// 서버 실시간 알림서비스 (sse) 위해 의존성 추가필요
+import { EventSourcePolyfill} from 'event-source-polyfill';
+
     export default {
         data(){
             return{
@@ -45,6 +49,23 @@ import { mapGetters } from 'vuex';
             const role = localStorage.getItem('role')
             if(role){
                 this.userRole = role;
+            }
+
+            if(this.userRole === 'ADMIN'){ // 어드민계정만 sse 연결
+                const headers = {
+                    headers: {
+                        Authorization : `Bearer ${token}`
+                    }
+                }
+                let sse = new EventSourcePolyfill(`${process.env.VUE_APP_API_BASE_URL}/subscribe`, headers);
+                console.log(process.env.VUE_APP_API_BASE_URL
+                    
+                )
+                // 서버에서 정해 준, connect 키 추가
+                sse.addEventListener('connect',(event) => {
+                    console.log(event); // 서버에서 connect 키의 값에 선언한 값이 출력된다.
+                })
+
             }
         },
         methods:{
